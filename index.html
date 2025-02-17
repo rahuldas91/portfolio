@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/projects.js" defer></script>
+</head>
+
+<body>
+    <div class="container" id="main-container">
+        <img src="assets/avatar.gif" alt="Avatar" class="avatar" id="avatar1">
+        <h1 class="title">WELCOME TO MY PORTFOLIO</h1>
+        <p class="intro typing">I'm Rahul Das, a passionate SDET exploring the digital world.</p>
+        <p class="press-start" id="start-btn">Press Start</p>
+
+        <div class="menu" id="menu">
+            <a href="#aboutMe" class="btn">About Me</a>
+            <a href="#projects" class="btn">Projects</a>
+            <a href="#achievements" class="btn">Achievements</a>
+            <a href="#gallery" class="btn">Gallery</a>
+            <a href="#blog" class="btn">Blog</a>
+            <img src="assets/avatar.png" alt="Avatar" class="avatar" id="avatar2">
+        </div>
+        <div id="about-me">
+            <p>
+                I am a seasoned IT professional with over 11 years of experience in software testing, automation,
+                and application development. Currently working at H&R Block Pvt Ltd,
+                I specialize in functional, performance, and security testing.
+            </p>
+
+            <p>
+                I have hands-on expertise in automation tools like <span class="highlight">Selenium, UFT, JMeter,</span>
+                and security testing tools like <span class="highlight">Acunetix and OWASP ZAP.</span>
+            </p>
+
+            <p>
+                My technical proficiency spans multiple programming languages,
+                including <span class="highlight">Java, Python, C#, and JavaScript,</span>
+                and I have extensive experience in test <span class="highlight">automation frameworks, bug tracking
+                    tools,</span>
+                and project management platforms like <span class="highlight">Azure DevOps, JIRA, and Git.</span>
+            </p>
+
+            <p>
+                I have contributed to major projects across various domains, designing test frameworks, writing reusable
+                automation scripts,
+                and ensuring software quality through rigorous testing. Passionate about continuous learning and
+                innovation,
+                I actively participate in online coding challenges and enjoy web design in my free time.
+            </p>
+            <button class="close-btn" onclick="closeAboutMe()">Close</button>
+        </div>
+        <div id="projects">
+            <div class="project-container">
+                <div id="project-cards" class="project-cards">
+                    <!-- Project cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+        <div id="project-detail" class="project-detail">
+            <button id="close-detail" >Close</button>
+            <div id="detail-content">
+                <!-- Detailed project content will be inserted here -->
+            </div>
+        </div>
+
+        <div id="ComingSoon">
+            <p id="ComingSoonText">COMING SOON...</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

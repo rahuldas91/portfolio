@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* ----------------- All styles for the landing page: ----------------*/
+
+body {
+    background: black;
+    color: limegreen;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 150px #e4a906;
+    transition: all 0.5s ease-in-out;
+    animation: avatarGlow 5s infinite alternate;
+}
+
+@keyframes avatarGlow {
+    0% { box-shadow: 0px 0px 70px #e4a906; }
+    25% { box-shadow: 5px 5px 100px #e4a906; }
+    50% { box-shadow: 10px 10px 130px #e4a906; }
+    75% { box-shadow: 5px 5px 100px #e4a906; }
+    100% { box-shadow: 0px 0px 70px #e4a906; }
+}
+
+.title, .intro {
+    font-size: 60px;
+    text-shadow: 1px 1px 4px #f10404c9;
+}
+
+.intro {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.press-start {
+    font-size: 30px;
+    animation: blink 1s infinite alternate;
+    cursor: pointer;
+    text-shadow: 1px 1px 4px #f10404c9;
+    border: 2px solid limegreen;
+    padding: 5px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.btn {
+    display: inline-flex;
+    background: none;
+    color: limegreen;
+    font-size: 40px;
+    padding: 10px;
+    border: 2px solid limegreen;
+    text-decoration: none;
+    margin: 5px 0;
+    width: 200px;
+    text-align: left;
+    box-shadow: 2px 2px 8px #00ff00;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: limegreen;
+    color: black;
+}
+
+.move {
+    margin-top: 20px;
+    width: 75px;
+    height: 75px;
+
+}
+.typing {
+    font-size: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid limegreen;
+    width: 0;
+    animation: typing 3s steps(20, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0ch; }
+    to { width: 61ch; } /* Adjust based on text length */
+}
+
+/* ----------------- All styles for the about-me section: ----------------*/
+#about-me {
+    display: none; /* Hidden by default */
+    font-size: 28px;
+    font-family: 'VT323', monospace;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 2px solid limegreen;
+    /* box-shadow: 0 0 15px limegreen; */
+    animation: avatarGlow 5s infinite alternate;
+}
+
+.close-btn {
+    margin-top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    color: limegreen;
+    border: 2px solid limegreen;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 8px #00ff00;
+}
+
+.highlight {
+ 
+    color: rgb(240, 187, 13);
+
+}
+
+/* ----------------- All styles for the projects section: ----------------*/
+#projects {
+    display: none; /* Hidden by default */
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid limegreen;
+    /* box-shadow: 0 0 15px limegreen; */
+    margin-top: 50px;
+    animation: avatarGlow 5s infinite alternate;
+}
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    width: 20%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-detail {
+    text-align: justify;
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    padding: 20px;
+    width: 40%;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+#close-detail {
+    margin-top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    color: limegreen;
+    border: 2px solid limegreen;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 8px #00ff00;
+}
+
+
+#detail-content {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top:20px;
+}
+
+/* ----------------- All styles for the Coming Soon section: ----------------*/
+
+@keyframes blink {
+    50% { opacity: 0.2; }
+}
+
+@keyframes glitch {
+    0% { text-shadow: 3px 3px 0px #ff00ff, -3px -3px 0px #00ffff; }
+    20% { text-shadow: -3px -3px 0px #ff00ff, 3px 3px 0px #00ffff; }
+    40% { text-shadow: 5px 5px 0px #ff00ff, -5px -5px 0px #00ffff; }
+    60% { text-shadow: -5px -5px 0px #ff00ff, 5px 5px 0px #00ffff; }
+    80% { text-shadow: 3px -3px 0px #ff00ff, -3px 3px 0px #00ffff; }
+    100% { text-shadow: -3px 3px 0px #ff00ff, 3px -3px 0px #00ffff; }
+}
+
+#ComingSoon {
+    display: none; /* Hidden by default */
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid limegreen;
+    /* box-shadow: 0 0 15px limegreen; */
+    margin-top: 50px;
+    animation: avatarGlow 5s infinite alternate;
+}
+
+#ComingSoonText {
+    animation: glitch 1.5s infinite alternate, blink 1s infinite;
+}
