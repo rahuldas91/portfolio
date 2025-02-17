@@ -85,6 +85,7 @@ body {
     justify-content: space-evenly;
 }
 
+
 .btn {
     display: inline-flex;
     background: none;
@@ -94,7 +95,7 @@ body {
     border: 2px solid limegreen;
     text-decoration: none;
     margin: 5px 0;
-    width: 200px;
+    width: 250px;
     text-align: left;
     box-shadow: 2px 2px 8px #00ff00;
     transition: background 0.3s ease;
@@ -124,7 +125,11 @@ body {
     from { width: 0ch; }
     to { width: 61ch; } /* Adjust based on text length */
 }
-
+.menu-icon{
+    color: #FFD43B;
+    margin-top: 20px;
+    margin-left: 20px;
+}
 /* ----------------- All styles for the about-me section: ----------------*/
 #about-me {
     display: none; /* Hidden by default */
@@ -154,6 +159,18 @@ body {
     padding: 5px 10px;
     box-shadow: 2px 2px 8px #00ff00;
 }
+
+.close-btn:hover {
+ 
+    
+    cursor: pointer;
+    background: none;
+    color: rgb(216, 179, 13);
+    border: 2px solid rgb(158, 22, 5);
+    padding: 5px 10px;
+    box-shadow: 2px 2px 8px rgb(158, 22, 5);
+}
+
 
 .highlight {
  
@@ -186,7 +203,18 @@ body {
     gap: 20px;
 }
 
+
+
 .project-card {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    width: 20%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover  {
     background-color: #1a1a1a;
     padding: 15px;
     border-radius: 10px;
@@ -270,4 +298,50 @@ body {
 
 #ComingSoonText {
     animation: glitch 1.5s infinite alternate, blink 1s infinite;
+}
+
+/* ----------------- All styles for the Skill Page section: ----------------*/
+#skillsPage {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: limegreen;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    text-shadow: 2px 2px 8px limegreen;
+}
+
+.skill-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    border-bottom: 1px solid limegreen;
+    padding-bottom: 5px;
+}
+
+.stars {
+    color: gold;
+    font-size: 20px;
+}
+#skillsContainer{
+    display: flex;
+    max-width: 40%;
 }

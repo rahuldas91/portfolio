@@ -47,12 +47,15 @@ function closeAboutMe() {
     document.getElementById("about-me").style.display = "none";
 });
 
-document.querySelector(".btn[href='#gallery']").addEventListener("click", function() {
+
+
+document.querySelector(".btn[href='#skills']").addEventListener("click", function() {
     
     document.getElementById("projects").style.display = "none";
-    document.getElementById("ComingSoon").style.display = "block";
+    document.getElementById("ComingSoon").style.display = "none";
     document.getElementById("projects").style.display = "none";
     document.getElementById("about-me").style.display = "none";
+    displaySkills();
 
 });
 

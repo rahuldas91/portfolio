@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
     <title>Retro Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
     <script src="js/projects.js" defer></script>
+    <script src="js/skills.js" defer></script>
 </head>
 
 <body>
@@ -18,11 +20,12 @@
         <p class="press-start" id="start-btn">Press Start</p>
 
         <div class="menu" id="menu">
-            <a href="#aboutMe" class="btn">About Me</a>
-            <a href="#projects" class="btn">Projects</a>
-            <a href="#achievements" class="btn">Achievements</a>
-            <a href="#gallery" class="btn">Gallery</a>
-            <a href="#blog" class="btn">Blog</a>
+            
+            <a href="#aboutMe" class="btn">About Me <i class="fa-solid fa-user fa-2xs menu-icon"></i></a>
+            <a href="#projects" class="btn">Projects <i class="fa-solid fa-folder fa-2xs menu-icon"></i></a>
+            <a href="#achievements" class="btn">Achievements <i class="fa-solid fa-trophy fa-2xs menu-icon" ></i> </a>
+            <a href="#skills" class="btn">#Skills <i class="fa-solid fa-screwdriver-wrench fa-2xs menu-icon"></i></a>
+            <a href="#blog" class="btn">Blog<i class="fa-solid fa-square-rss fa-2xs menu-icon"></i></a>
             <img src="assets/avatar.png" alt="Avatar" class="avatar" id="avatar2">
         </div>
         <div id="about-me">
@@ -68,6 +71,9 @@
             </div>
         </div>
 
+        <div id="skillsPage">
+            <div id="skillsContainer"></div>
+        </div>
         <div id="ComingSoon">
             <p id="ComingSoonText">COMING SOON...</p>
         </div>

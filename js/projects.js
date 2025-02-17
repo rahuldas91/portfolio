@@ -162,7 +162,7 @@ projects.forEach(project => {
   const projectCard = document.createElement('div');
   projectCard.classList.add('project-card');
   projectCard.innerHTML = `
-    <h3>${project.Project}</h3>
+    <h3><i class="fa-regular fa-folder fa-lg"></i>    ${project.Project}</h3>
     <p><strong>Client:</strong> ${project.Client}</p>
   `;
   
