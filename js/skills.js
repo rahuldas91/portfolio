@@ -3,17 +3,60 @@ const skillsData = {
     {
       "Section": "Programming",
       "Skills": {
-        "C#": 4,
-        "Java": 4,
-        "JavaScript": 3
+        "JAVA 8": 5,
+        "VBScript": 3,
+        "JavaScript": 4,
+        "Python": 4,
+        "C#": 5,
+        "AutoIt3": 3,
+        "TypeScript": 4,
+        "HTML": 5
       }
     },
     {
-      "Section": "Tools",
+      "Section": "Bug Tracking Tools",
       "Skills": {
-        "UFT": 4,
-        "Selenium": 5,
-        "JMeter": 4
+        "Mantis 1.2.8": 3,
+        "Team Foundation Server": 4
+      }
+    },
+    {
+      "Section": "Automation Tools",
+      "Skills": {
+        "Selenium Web Driver": 5,
+        "UFT 11.5": 4,
+        "Coded UI": 3,
+        "AutoIT": 4
+      }
+    },
+    {
+      "Section": "Performance Testing",
+      "Skills": {
+        "JMeter": 5,
+        "WAPT Pro": 4,
+        "Blaze Meter": 3
+      }
+    },
+    {
+      "Section": "Security Testing",
+      "Skills": {
+        "Acunetix": 4,
+        "OWASP ZAP": 5,
+        "Burp Suite": 4
+      }
+    },
+    {
+      "Section": "Project Management Tools",
+      "Skills": {
+        "Microsoft Test Manager": 4,
+        "Git": 5,
+        "VSTS": 3,
+        "TFS": 4,
+        "JIRA": 5,
+        "BitBucket": 4,
+        "Confluence": 3,
+        "SVN": 4,
+        "Azure": 5
       }
     },
     {
@@ -54,6 +97,30 @@ const skillsData = {
         "JUnit": 3,
         "Appium": 3
       }
+    },
+    {
+      "Section": "Web Development",
+      "Skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "React": 4
+      }
+    },
+    {
+      "Section": "Security",
+      "Skills": {
+        "OWASP": 4,
+        "Burp Suite": 3,
+        "Nessus": 4
+      }
+    },
+    {
+      "Section": "Mobile Development",
+      "Skills": {
+        "Android": 4,
+        "iOS": 3,
+        "Flutter": 2
+      }
     }
   ]
 };
@@ -81,7 +148,21 @@ function displaySkills() {
 
           let stars = document.createElement("span");
           stars.classList.add("stars");
-          stars.innerHTML = "★".repeat(section.Skills[skill]) + "☆".repeat(5 - section.Skills[skill]);
+
+          let rating = section.Skills[skill]; // Rating out of 5
+
+          // Generate stars dynamically
+          for (let i = 0; i < 5; i++) {
+              let star = document.createElement("i");
+
+              if (i < rating) {
+                  star.classList.add("fa-solid", "fa-star","fa-2xs"); // Filled star
+              } else {
+                  star.classList.add("fa-regular", "fa-star", "fa-2xs"); // Fading effect for unfilled stars
+              }
+
+              stars.appendChild(star);
+          }
 
           skillDiv.appendChild(skillName);
           skillDiv.appendChild(stars);
@@ -95,4 +176,3 @@ function displaySkills() {
   document.getElementById("skillsPage").style.display = "block";
 }
 
-// Call displaySkills() when needed
