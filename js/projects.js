@@ -162,7 +162,7 @@ projects.forEach(project => {
   const projectCard = document.createElement('div');
   projectCard.classList.add('project-card');
   projectCard.innerHTML = `
-    <h3>${project.Project}</h3>
+    <h3><i class="fa-regular fa-folder fa-lg"></i>    ${project.Project}</h3>
     <p><strong>Client:</strong> ${project.Client}</p>
   `;
   
@@ -192,8 +192,3 @@ closeDetailButton.addEventListener('click', () => {
   projectContainer.style.display = 'block';
 });
 
-document.querySelector(".btn[href='#projects']").addEventListener("click", function() {
-  document.getElementById("projects").style.display = "block";
-  document.getElementById("ComingSoon").style.display = "none";
-  document.getElementById("about-me").style.display = "none";
-});

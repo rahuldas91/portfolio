@@ -85,6 +85,7 @@ body {
     justify-content: space-evenly;
 }
 
+
 .btn {
     display: inline-flex;
     background: none;
@@ -94,7 +95,7 @@ body {
     border: 2px solid limegreen;
     text-decoration: none;
     margin: 5px 0;
-    width: 200px;
+    width: 250px;
     text-align: left;
     box-shadow: 2px 2px 8px #00ff00;
     transition: background 0.3s ease;
@@ -124,7 +125,11 @@ body {
     from { width: 0ch; }
     to { width: 61ch; } /* Adjust based on text length */
 }
-
+.menu-icon{
+    /* color: #ffffff; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
 /* ----------------- All styles for the about-me section: ----------------*/
 #about-me {
     display: none; /* Hidden by default */
@@ -141,7 +146,7 @@ body {
     padding: 20px;
     border: 2px solid limegreen;
     /* box-shadow: 0 0 15px limegreen; */
-    animation: avatarGlow 5s infinite alternate;
+    /* animation: avatarGlow 5s infinite alternate; */
 }
 
 .close-btn {
@@ -154,6 +159,18 @@ body {
     padding: 5px 10px;
     box-shadow: 2px 2px 8px #00ff00;
 }
+
+.close-btn:hover {
+ 
+    
+    cursor: pointer;
+    background: none;
+    color: rgb(216, 179, 13);
+    border: 2px solid rgb(158, 22, 5);
+    padding: 5px 10px;
+    box-shadow: 2px 2px 8px rgb(158, 22, 5);
+}
+
 
 .highlight {
  
@@ -178,7 +195,7 @@ body {
     border: 1px solid limegreen;
     /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
-    animation: avatarGlow 5s infinite alternate;
+    /* animation: avatarGlow 5s infinite alternate; */
 }
 .project-cards {
     display: flex;
@@ -187,6 +204,15 @@ body {
 }
 
 .project-card {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    width: 20%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover  {
     background-color: #1a1a1a;
     padding: 15px;
     border-radius: 10px;
@@ -265,9 +291,94 @@ body {
     border: 1px solid limegreen;
     /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
-    animation: avatarGlow 5s infinite alternate;
+    /* animation: avatarGlow 5s infinite alternate; */
 }
 
 #ComingSoonText {
     animation: glitch 1.5s infinite alternate, blink 1s infinite;
+}
+
+/* ----------------- All styles for the Skill Page section: ----------------*/
+#skillsPage {
+    display: none; /* Hidden by default */
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid limegreen;
+    /* box-shadow: 0 0 15px limegreen; */
+    margin-top: 50px;
+    /* animation: avatarGlow 5s infinite alternate; */
+    margin-top: 80px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 70vh;
+}
+#allSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.skill-section {
+    margin-bottom: 20px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    border-bottom: 1px solid limegreen;
+    padding-bottom: 5px;
+}
+
+.stars {
+    color: gold;
+    font-size: 20px;
+}
+.fa-star{
+    padding: 2px;
+}
+.fa-star:hover {
+    animation: glitch 1.5s infinite alternate, blink 1s infinite;
+}
+
+
+/* For Webkit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: black; /* Background color */
+    border-radius: 10px;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(91, 199, 91); /* Scrollbar color */
+    border-radius: 10px;
+}
+
+/* Scrollbar Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(91, 199, 91);; /* Lighter neon green */
 }
