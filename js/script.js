@@ -32,6 +32,7 @@ document.querySelector(".btn[href='#aboutMe']").addEventListener("click", functi
     document.getElementById("about-me").style.display = "block";
     document.getElementById("ComingSoon").style.display = "none";
     document.getElementById("projects").style.display = "none";
+    document.getElementById("skillsPage").style.display = "none";
 });
 
 function closeAboutMe() {
@@ -45,9 +46,16 @@ function closeAboutMe() {
     document.getElementById("ComingSoon").style.display = "block";
     document.getElementById("projects").style.display = "none";
     document.getElementById("about-me").style.display = "none";
+    document.getElementById("skillsPage").style.display = "none";
+    
 });
 
-
+document.querySelector(".btn[href='#projects']").addEventListener("click", function() {
+    document.getElementById("projects").style.display = "block";
+    document.getElementById("ComingSoon").style.display = "none";
+    document.getElementById("about-me").style.display = "none";
+    document.getElementById("skillsPage").style.display = "none";
+  });
 
 document.querySelector(".btn[href='#skills']").addEventListener("click", function() {
     
@@ -65,5 +73,6 @@ document.querySelector(".btn[href='#blog']").addEventListener("click", function(
     document.getElementById("ComingSoon").style.display = "block";
     document.getElementById("projects").style.display = "none";
     document.getElementById("about-me").style.display = "none";
+    document.getElementById("skillsPage").style.display = "none";
 
 });

@@ -192,8 +192,3 @@ closeDetailButton.addEventListener('click', () => {
   projectContainer.style.display = 'block';
 });
 
-document.querySelector(".btn[href='#projects']").addEventListener("click", function() {
-  document.getElementById("projects").style.display = "block";
-  document.getElementById("ComingSoon").style.display = "none";
-  document.getElementById("about-me").style.display = "none";
-});

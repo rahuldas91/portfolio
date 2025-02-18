@@ -58,7 +58,7 @@ const skillsData = {
   ]
 };
 function displaySkills() {
-  const container = document.getElementById("skillsContainer");
+  const container = document.getElementById("allSkills");
   container.innerHTML = ""; // Clear existing content
 
   skillsData.Sections.forEach(section => {

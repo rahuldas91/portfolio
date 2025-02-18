@@ -146,7 +146,7 @@ body {
     padding: 20px;
     border: 2px solid limegreen;
     /* box-shadow: 0 0 15px limegreen; */
-    animation: avatarGlow 5s infinite alternate;
+    /* animation: avatarGlow 5s infinite alternate; */
 }
 
 .close-btn {
@@ -195,15 +195,13 @@ body {
     border: 1px solid limegreen;
     /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
-    animation: avatarGlow 5s infinite alternate;
+    /* animation: avatarGlow 5s infinite alternate; */
 }
 .project-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
-
 
 .project-card {
     background-color: #1a1a1a;
@@ -293,7 +291,7 @@ body {
     border: 1px solid limegreen;
     /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
-    animation: avatarGlow 5s infinite alternate;
+    /* animation: avatarGlow 5s infinite alternate; */
 }
 
 #ComingSoonText {
@@ -302,28 +300,38 @@ body {
 
 /* ----------------- All styles for the Skill Page section: ----------------*/
 #skillsPage {
-    display: none; /* Hidden initially */
+    display: none; /* Hidden by default */
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    color: rgb(255, 255, 255);
+    text-align: justify;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: limegreen;
-    font-family: 'VT323', monospace;
-    font-size: 24px;
-    text-shadow: 2px 2px 8px limegreen;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid limegreen;
+    /* box-shadow: 0 0 15px limegreen; */
+    margin-top: 50px;
+    /* animation: avatarGlow 5s infinite alternate; */
 }
-
+#allSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .skill-section {
     margin-bottom: 20px;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
 }
 
 .skill-group {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     gap: 20px;
     width: 80%;
@@ -341,7 +349,4 @@ body {
     color: gold;
     font-size: 20px;
 }
-#skillsContainer{
-    display: flex;
-    max-width: 40%;
-}
+
