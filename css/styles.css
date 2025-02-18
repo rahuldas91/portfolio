@@ -126,7 +126,7 @@ body {
     to { width: 61ch; } /* Adjust based on text length */
 }
 .menu-icon{
-    color: #FFD43B;
+    /* color: #ffffff; */
     margin-top: 20px;
     margin-left: 20px;
 }
