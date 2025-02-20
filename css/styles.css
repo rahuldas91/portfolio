@@ -15,6 +15,23 @@ body {
     align-items: center;
     height: 100vh;
 }
+/* body {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 10%, transparent 10%) repeat;
+    background-size: 60px 60px; 
+    background-color: #121212; 
+} */
+@keyframes moveGrid {
+    0% { background-position: 0 0; }
+    50% { background-position: 50px 50px; }
+    100% { background-position: 0 0; }
+}
+
+body {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 10%, transparent 10%) repeat;
+    background-size: 20px 20px; 
+    background-color: #121212; 
+    animation: moveGrid 10s linear infinite;
+}
 
 .container {
     display: flex;
