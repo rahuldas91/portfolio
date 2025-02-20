@@ -2,42 +2,62 @@ document.addEventListener("DOMContentLoaded", function () {
     const timelineData = {
         "timeline": [
             {
-                "title": "College Graduation",
-                "from": "2006",
-                "to": "2010",
-                "description": "Graduated with a Computer Science degree from XYZ University.",
-                "type": "achievement"
-            },
-            {
-                "title": "First Job - Software Engineer",
-                "from": "2010",
-                "to": "2014",
-                "description": "Worked at ABC Tech as a Software Engineer.",
+                "title": "Test Analyst",
+                "company": "H&R Block India",
+                "from": "Apr 2023",
+                "to": "Present",
+                "description": "Specialized in Framework Development, C#, Microsoft Azure, and Solution Architecture.",
                 "type": "job"
             },
             {
-                "title": "Promotion - Senior Software Engineer",
-                "from": "2014",
-                "to": "2017",
-                "description": "Promoted to Senior Software Engineer at ABC Tech.",
-                "type": "job"
-            },
-            {
-                "title": "Award for Best Performance",
-                "from": "2017",
-                "to": "2018",
-                "description": "Received the Best Employee award for outstanding contributions.",
+                "title": "Beyond The Call Of Duty Award",
+                "from": "2023",
+                "to": "",
+                "description": "Recognized for bringing in new ideas and recommendations to the Quality team.",
                 "type": "achievement"
             },
             {
-                "title": "Lead Developer at DEF Corp",
-                "from": "2018",
-                "to": "2022",
-                "description": "Worked as a Lead Developer handling major projects.",
+                "title": "Quarterly Block Star Award",
+                "from": "2023",
+                "to": "",
+                "description": "Recognized for hard work and dedication towards projects.",
+                "type": "achievement"
+            },
+            {
+                "title": "Test Lead",
+                "company": "EY",
+                "from": "May 2021",
+                "to": "Apr 2023",
+                "description": "Led test automation projects, ensuring high-quality deliveries.",
+                "type": "job"
+            },
+            {
+                "title": "Senior Test Automation Consultant",
+                "company": "H&R Block",
+                "from": "Mar 2020",
+                "to": "May 2021",
+                "description": "Developed automated testing solutions and improved software reliability.",
+                "type": "job"
+            },
+            {
+                "title": "Consultant: Senior Automation Engineer",
+                "company": "IBS Software",
+                "from": "Sep 2017",
+                "to": "Feb 2019",
+                "description": "Worked on automation strategies using UFT and Selenium.",
+                "type": "job"
+            },
+            {
+                "title": "Test Automation Engineer",
+                "company": "SE Mentor Solutions",
+                "from": "Mar 2015",
+                "to": "Mar 2018",
+                "description": "Developed test automation frameworks for various applications.",
                 "type": "job"
             }
         ]
     };
+    
 
     const timelineContainer = document.getElementById("timeline");
 
@@ -48,15 +68,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Create timeline item
         let timelineItem = document.createElement("div");
-        timelineItem.classList.add("timeline-item", positionClass);
+        // timelineItem.classList.add("timeline-item", positionClass);
 
-        timelineItem.innerHTML = `
+        if(item.type === "achievement") {
+            timelineItem.classList.add("timeline-item", "right");
+            timelineItem.innerHTML = `
             <div class="timeline-content">
-                <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h2>
-                <h3>${item.title}</h3>
+                <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from}</h2>
+                <h2>${item.title}</h2>
+                
                 <p>${item.description}</p>
             </div>
         `;
+        }
+        else {
+            timelineItem.classList.add("timeline-item", "left");
+            timelineItem.innerHTML = `
+            <div class="timeline-content">
+                <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h2>
+                <h2>${item.title}</h2>
+                <h3>${item.company}</h3>
+                <p>${item.description}</p>
+            </div>
+        `;
+        }
+
+        // timelineItem.innerHTML = `
+        //     <div class="timeline-content">
+        //         <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h2>
+        //         <h2>${item.title}</h2>
+        //         <h3>${item.company}</h3>
+        //         <p>${item.description}</p>
+        //     </div>
+        // `;
 
         // Add hover effect
         timelineItem.addEventListener("mouseenter", function () {
