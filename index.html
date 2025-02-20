@@ -10,6 +10,7 @@
     <script src="js/script.js" defer></script>
     <script src="js/projects.js" defer></script>
     <script src="js/skills.js" defer></script>
+    <script src="js/timeline.js" defer></script>
 </head>
 
 <body>
@@ -23,9 +24,8 @@
             
             <a href="#aboutMe" class="btn">Profile <i class="fa-solid fa-user fa-2xs menu-icon"></i></a>
             <a href="#projects" class="btn">Missions <i class="fa-solid fa-folder fa-2xs menu-icon"></i></a>
-            <a href="#achievements" class="btn">Achievements <i class="fa-solid fa-trophy fa-2xs menu-icon" ></i> </a>
+            <a href="#timeline" class="btn">Timeline <i class="fa-solid fa-trophy fa-2xs menu-icon" ></i> </a>
             <a href="#skills" class="btn">Skills <i class="fa-solid fa-screwdriver-wrench fa-2xs menu-icon"></i></a>
-            <a href="#blog" class="btn">Blog<i class="fa-solid fa-satellite-dish fa-2xs menu-icon"></i></a>
             <img src="assets/avatar.png" alt="Avatar" class="avatar" id="avatar2">
         </div>
         <div id="about-me">
@@ -55,7 +55,7 @@
                 innovation,
                 I actively participate in online coding challenges and enjoy web design in my free time.
             </p>
-            <button class="close-btn" onclick="closeAboutMe()">Close</button>
+            <!-- <button class="close-btn" onclick="closeAboutMe()">Close</button> -->
             <div class="social-links">
                 <a href="https://github.com/rahuldas91" target="_blank">
                     <i class="fa-brands fa-github" title="Git Hub"></i>
@@ -83,6 +83,11 @@
             <button id="close-detail" >Close</button>
             <div id="detail-content">
                 <!-- Detailed project content will be inserted here -->
+            </div>
+        </div>
+        <div id="timelinePage">
+                <div class="timeline" id="timeline">
+                    <!-- Timeline items will be dynamically inserted here -->
             </div>
         </div>
 

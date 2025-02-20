@@ -172,7 +172,7 @@ body {
     /* animation: avatarGlow 5s infinite alternate; */
 }
 
-.close-btn {
+/* .close-btn {
     margin-top: 10px;
     font-size: 20px;
     cursor: pointer;
@@ -181,7 +181,7 @@ body {
     border: 2px solid limegreen;
     padding: 5px 10px;
     box-shadow: 2px 2px 8px #00ff00;
-}
+} */
 
 .close-btn:hover {
  
@@ -404,4 +404,116 @@ body {
 /* Scrollbar Handle on Hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(91, 199, 91);; /* Lighter neon green */
+}
+
+#timelinePage{
+    display: none; /* Hidden by default */
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    /* border: 1px solid limegreen; */
+    /* box-shadow: 0 0 15px limegreen; */
+    margin-top: 50px;
+    /* animation: avatarGlow 5s infinite alternate; */
+    margin-top: 80px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 70vh;
+}
+
+
+
+.timeline-title {
+    font-size: 40px;
+    text-shadow: 2px 2px 8px limegreen;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: limegreen;
+    box-shadow: 0px 0px 10px limegreen;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 45%;
+    padding: 10px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid limegreen;
+    box-shadow: 0px 0px 10px limegreen;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 40px;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 55%;
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: limegreen;
+    border-radius: 50%;
+    top: 20px;
+    box-shadow: 0px 0px 15px limegreen;
+}
+
+.timeline-item.left::after {
+    right: -32px;
+}
+
+.timeline-item.right::after {
+    left: -32px;
+}
+
+/* .timeline-content {
+    padding: 20px;
+} */
+
+.timeline-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px limegreen;
+}
+
+.timeline-content p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
 }
