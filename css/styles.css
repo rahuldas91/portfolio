@@ -130,6 +130,29 @@ body {
     margin-top: 20px;
     margin-left: 20px;
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: black;
+    border-top: 2px solid limegreen;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: limegreen;
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00ff00;
+    transform: scale(1.2);
+    animation: glitch 5s infinite alternate;
+}
+
 /* ----------------- All styles for the about-me section: ----------------*/
 #about-me {
     display: none; /* Hidden by default */
