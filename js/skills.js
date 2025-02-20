@@ -5,11 +5,9 @@ const skillsData = {
       "Skills": {
         "JAVA 8": 5,
         "VBScript": 3,
-        "JavaScript": 4,
-        "Python": 4,
+        "JavaScript": 3,
         "C#": 5,
         "AutoIt3": 3,
-        "TypeScript": 4,
         "HTML": 5
       }
     },
@@ -32,21 +30,21 @@ const skillsData = {
     {
       "Section": "Performance Testing",
       "Skills": {
-        "JMeter": 5,
-        "WAPT Pro": 4,
-        "Blaze Meter": 3
+        "JMeter": 4,
+        "WAPT Pro": 2,
+        "Blaze Meter": 2
       }
     },
     {
       "Section": "Security Testing",
       "Skills": {
-        "Acunetix": 4,
-        "OWASP ZAP": 5,
-        "Burp Suite": 4
+        "Acunetix": 3,
+        "OWASP ZAP": 3,
+        "Burp Suite": 2
       }
     },
     {
-      "Section": "Project Management Tools",
+      "Section": "Management Tools",
       "Skills": {
         "Microsoft Test Manager": 4,
         "Git": 5,
@@ -62,15 +60,15 @@ const skillsData = {
     {
       "Section": "Database",
       "Skills": {
-        "SQL": 5,
-        "PostgreSQL": 4,
+        "SQL": 3,
+        "PostgreSQL": 3,
         "MongoDB": 3
       }
     },
     {
       "Section": "Cloud",
       "Skills": {
-        "AWS": 4,
+        "AWS": 2,
         "Azure": 3,
         "Google Cloud": 2
       }
@@ -78,24 +76,35 @@ const skillsData = {
     {
       "Section": "DevOps",
       "Skills": {
-        "Docker": 4,
-        "Kubernetes": 3,
-        "Jenkins": 4
+        "Docker": 2,
+        "Kubernetes": 2,
+        "Jenkins": 3
       }
     },
     {
       "Section": "Version Control",
       "Skills": {
         "Git": 5,
-        "SVN": 4
+        "SVN": 5
+      }
+    },
+    {
+      "Section": "Testing Frameworks",
+      "Skills": {
+        "TestNG": 5,
+        "JUnit": 4,
+        "NUnit": 3,
+        "XUnit": 4
       }
     },
     {
       "Section": "Automation",
       "Skills": {
-        "TestNG": 4,
-        "JUnit": 3,
-        "Appium": 3
+        "Appium": 3,
+        "Playwright": 4,
+        "Selenium": 5,
+        "Coded UI": 3,
+        "WebDriver IO": 3,
       }
     },
     {
@@ -109,16 +118,14 @@ const skillsData = {
     {
       "Section": "Security",
       "Skills": {
-        "OWASP": 4,
-        "Burp Suite": 3,
-        "Nessus": 4
+        "OWASP": 3,
+        "Burp Suite": 3
       }
     },
     {
       "Section": "Mobile Development",
       "Skills": {
         "Android": 4,
-        "iOS": 3,
         "Flutter": 2
       }
     }

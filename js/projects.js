@@ -183,12 +183,13 @@ function showProjectDetail(project) {
     <p><strong>Description:</strong> ${project.Description}</p>
   `;
   projectDetail.style.display = 'block';
-  projectContainer.style.display = 'none';
+  projectCardsContainer.style.opacity = "0.2";
+
 }
 
 // Close the project detail view
 closeDetailButton.addEventListener('click', () => {
   projectDetail.style.display = 'none';
-  projectContainer.style.display = 'block';
+  projectCardsContainer.style.opacity = "1";
 });
 
