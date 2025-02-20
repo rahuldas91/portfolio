@@ -10,15 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 "type": "job"
             },
             {
+                "title": "Quarterly Block Star Award",
+                "from": "2025",
+                "to": "",
+                "description": "Recognized for hard work and dedication towards projects.",
+                "type": "achievement"
+            },
+            {
                 "title": "Beyond The Call Of Duty Award",
-                "from": "2023",
+                "from": "2024",
                 "to": "",
                 "description": "Recognized for bringing in new ideas and recommendations to the Quality team.",
                 "type": "achievement"
             },
             {
                 "title": "Quarterly Block Star Award",
-                "from": "2023",
+                "from": "2024",
                 "to": "",
                 "description": "Recognized for hard work and dedication towards projects.",
                 "type": "achievement"
@@ -30,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 "to": "Apr 2023",
                 "description": "Led test automation projects, ensuring high-quality deliveries.",
                 "type": "job"
+            },
+            {
+                "title": "Pursuing Innovation",
+                "from": "2024",
+                "type": "achievement"
             },
             {
                 "title": "Senior Test Automation Consultant",
@@ -74,24 +86,33 @@ document.addEventListener("DOMContentLoaded", function () {
             timelineItem.classList.add("timeline-item", "right");
             timelineItem.innerHTML = `
             <div class="timeline-content">
-                <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from}</h2>
                 <h2>${item.title}</h2>
-                
-                <p>${item.description}</p>
+                <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from}</h2>
             </div>
         `;
         }
-        else {
+        if(item.type === "job") {
             timelineItem.classList.add("timeline-item", "left");
             timelineItem.innerHTML = `
             <div class="timeline-content">
-                <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h2>
                 <h2>${item.title}</h2>
+                <h3><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h3>
                 <h3>${item.company}</h3>
                 <p>${item.description}</p>
             </div>
         `;
         }
+        // else {
+        //     timelineItem.classList.add("timeline-item", "left");
+        //     timelineItem.innerHTML = `
+        //     <div class="timeline-content">
+        //         <h2>${item.title}</h2>
+        //         <h3><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h3>
+        //         <h3>${item.company}</h3>
+        //         <p>${item.description}</p>
+        //     </div>
+        // `;
+        // }
 
         // timelineItem.innerHTML = `
         //     <div class="timeline-content">
