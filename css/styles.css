@@ -229,6 +229,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    text-align: left;
 }
 
 .project-card {
