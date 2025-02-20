@@ -101,6 +101,7 @@ body {
     box-shadow: 2px 2px 8px #00ff00;
     transition: background 0.3s ease;
     border-radius: 10px;
+    text-shadow: 1px 1px 4px limegreen;
 }
 
 .btn:hover {

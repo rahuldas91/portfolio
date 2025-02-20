@@ -49,31 +49,83 @@ document.addEventListener("DOMContentLoaded", function () {
                 "type": "achievement"
             },
             {
-                "title": "Bronze Badge",
-                "from": "2023",
+                "title": "EY Cloud - Bronze",
+                "from": "2022",
                 "type": "badge"
+            },
+            {
+                "title": "EY Innovation - Bronze",
+                "from": "2022",
+                "type": "badge"
+            },
+            {
+                "title": "Lifelong Learning - CertiProf",
+                "from": "2022",
+                "type": "certificate"
+            },
+            {
+                "title": "Scrum Foundation Professional Certification - SFPC™ ! - CertiProf",
+                "from": "2022",
+                "type": "certificate"
+            },
+            {
+                "title": "Microsoft Certified: Azure Fundamentals",
+                "from": "2021",
+                "type": "certificate"
             },
             {
                 "title": "Senior Test Automation Consultant",
                 "company": "H&R Block",
-                "from": "Mar 2020",
-                "to": "May 2021",
+                "from": "2020",
+                "to": "021",
                 "description": "Developed automated testing solutions and improved software reliability.",
                 "type": "job"
             },
             {
                 "title": "Consultant: Senior Automation Engineer",
                 "company": "IBS Software",
-                "from": "Sep 2017",
-                "to": "Feb 2019",
+                "from": "2019",
+                "to": "2020",
                 "description": "Worked on automation strategies using UFT and Selenium.",
+                "type": "job"
+            },
+            {
+                "title": "Consultant: Senior Automation Engineer",
+                "company": "Lenovo",
+                "from": "018",
+                "to": "2019",
+                "description": "Worked on automation strategies using UFT and Selenium.",
+                "type": "job"
+            },
+            {
+                "title": "Consultant: UFT Test Automation",
+                "company": "Allianz Technology",
+                "from": "2017",
+                "to": "2018",
+                "description": "Worked on automation strategies using UFT and Selenium.",
+                "type": "job"
+            },
+            {
+                "title": "Consultant: Test Automation Engineer",
+                "company": "RM Education Solutions",
+                "from": "2017",
+                "to": "2017",
+                "description": "Worked on automation strategies using UFT and Selenium.",
+                "type": "job"
+            },
+            {
+                "title": "Consultant: Test Automation Engineer",
+                "company": "Xerox",
+                "from": "Mar 2015",
+                "to": "Mar 2017",
+                "description": "Developed test automation frameworks for various applications.",
                 "type": "job"
             },
             {
                 "title": "Test Automation Engineer",
                 "company": "SE Mentor Solutions",
-                "from": "Mar 2015",
-                "to": "Mar 2018",
+                "from": "Mar 2014",
+                "to": "Mar 2021",
                 "description": "Developed test automation frameworks for various applications.",
                 "type": "job"
             }
@@ -84,13 +136,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const timelineContainer = document.getElementById("timeline");
 
     timelineData.timeline.forEach((item, index) => {
-        // Determine icon based on type
-        //let iconClass = item.type === "job" ? "fa-suitcase" : "fa-trophy";
+
         let positionClass = index % 2 === 0 ? "left" : "right";
 
         // Create timeline item
         let timelineItem = document.createElement("div");
-        // timelineItem.classList.add("timeline-item", positionClass);
 
         if (item.type === "achievement") {
             timelineItem.classList.add("timeline-item", "right");
@@ -119,6 +169,16 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="timeline-content">
             <h2>${item.title}</h2>
             <h2><i class="fa-solid fa-award icon"></i> ${item.from}</h2>
+        </div>
+    `;
+        }
+
+        if (item.type === "certificate") {
+            timelineItem.classList.add("timeline-item", "right");
+            timelineItem.innerHTML = `
+        <div class="timeline-content">
+            <h2>${item.title}</h2>
+            <h2><i class="fa-solid fa-graduation-cap icon"></i> ${item.from}</h2>
         </div>
     `;
         }
