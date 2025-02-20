@@ -83,6 +83,7 @@ body {
     gap: 20px;
     width: 90%;
     justify-content: space-evenly;
+
 }
 
 
@@ -99,6 +100,7 @@ body {
     text-align: left;
     box-shadow: 2px 2px 8px #00ff00;
     transition: background 0.3s ease;
+    border-radius: 10px;
 }
 
 .btn:hover {
@@ -168,6 +170,7 @@ body {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border: 2px solid limegreen;
+    border-radius: 10px;
     /* box-shadow: 0 0 15px limegreen; */
     /* animation: avatarGlow 5s infinite alternate; */
 }
@@ -218,6 +221,7 @@ body {
     border: 1px solid limegreen;
     /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
+    border-radius: 10px;
     /* animation: avatarGlow 5s infinite alternate; */
 }
 .project-cards {
@@ -343,6 +347,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 70vh;
+    border-radius: 10px;
 }
 #allSkills {
     display: flex;

@@ -40,8 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             {
                 "title": "Pursuing Innovation",
-                "from": "2024",
+                "from": "2023",
                 "type": "achievement"
+            },
+            {
+                "title": "Spot Award",
+                "from": "2023",
+                "type": "achievement"
+            },
+            {
+                "title": "Bronze Badge",
+                "from": "2023",
+                "type": "badge"
             },
             {
                 "title": "Senior Test Automation Consultant",
@@ -69,59 +79,49 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         ]
     };
-    
+
 
     const timelineContainer = document.getElementById("timeline");
 
     timelineData.timeline.forEach((item, index) => {
         // Determine icon based on type
-        let iconClass = item.type === "job" ? "fa-suitcase" : "fa-trophy";
+        //let iconClass = item.type === "job" ? "fa-suitcase" : "fa-trophy";
         let positionClass = index % 2 === 0 ? "left" : "right";
 
         // Create timeline item
         let timelineItem = document.createElement("div");
         // timelineItem.classList.add("timeline-item", positionClass);
 
-        if(item.type === "achievement") {
+        if (item.type === "achievement") {
             timelineItem.classList.add("timeline-item", "right");
             timelineItem.innerHTML = `
             <div class="timeline-content">
                 <h2>${item.title}</h2>
-                <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from}</h2>
+                <h2><i class="fa-solid fa-trophy icon"></i> ${item.from}</h2>
             </div>
         `;
         }
-        if(item.type === "job") {
+        if (item.type === "job") {
             timelineItem.classList.add("timeline-item", "left");
             timelineItem.innerHTML = `
             <div class="timeline-content">
-                <h2>${item.title}</h2>
-                <h3><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h3>
+                <h2><i class="fa-solid fa-suitcase icon"></i>${item.title}</h2>
+                <h3> ${item.from} - ${item.to}</h3>
                 <h3>${item.company}</h3>
                 <p>${item.description}</p>
             </div>
         `;
         }
-        // else {
-        //     timelineItem.classList.add("timeline-item", "left");
-        //     timelineItem.innerHTML = `
-        //     <div class="timeline-content">
-        //         <h2>${item.title}</h2>
-        //         <h3><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h3>
-        //         <h3>${item.company}</h3>
-        //         <p>${item.description}</p>
-        //     </div>
-        // `;
-        // }
 
-        // timelineItem.innerHTML = `
-        //     <div class="timeline-content">
-        //         <h2><i class="fa-solid ${iconClass} icon"></i> ${item.from} - ${item.to}</h2>
-        //         <h2>${item.title}</h2>
-        //         <h3>${item.company}</h3>
-        //         <p>${item.description}</p>
-        //     </div>
-        // `;
+        if (item.type === "badge") {
+            timelineItem.classList.add("timeline-item", "right");
+            timelineItem.innerHTML = `
+        <div class="timeline-content">
+            <h2>${item.title}</h2>
+            <h2><i class="fa-solid fa-award icon"></i> ${item.from}</h2>
+        </div>
+    `;
+        }
 
         // Add hover effect
         timelineItem.addEventListener("mouseenter", function () {
