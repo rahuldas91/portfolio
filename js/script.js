@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('.menu').style.display = 'block';
         document.getElementById("menu").style.display = "flex";
         document.getElementById("avatar1").style.display = 'none';
+        document.getElementById("avatarMob").style.display = 'none';
         document.getElementById("avatar2").classList.add("move");
         document.getElementById("about-me").style.display = "block";
     }    
