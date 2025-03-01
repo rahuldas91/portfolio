@@ -2,7 +2,7 @@
 /* ----------------- All styles for the landing page: ----------------*/
 
 /* Media Queries */
-@media (min-width: 768px) {
+@media (min-width: 1600px) {
     
 body {
     background: black;
