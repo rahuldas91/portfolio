@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 /* ----------------- All styles for the landing page: ----------------*/
 
+/* Media Queries */
+@media (min-width: 768px) {
+    
 body {
     background: black;
     color: limegreen;
@@ -15,11 +18,7 @@ body {
     align-items: center;
     height: 100vh;
 }
-/* body {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 10%, transparent 10%) repeat;
-    background-size: 60px 60px; 
-    background-color: #121212; 
-} */
+
 @keyframes moveGrid {
     0% { background-position: 0 0; }
     50% { background-position: 50px 50px; }
@@ -193,17 +192,6 @@ body {
     /* animation: avatarGlow 5s infinite alternate; */
 }
 
-/* .close-btn {
-    margin-top: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    background: none;
-    color: limegreen;
-    border: 2px solid limegreen;
-    padding: 5px 10px;
-    box-shadow: 2px 2px 8px #00ff00;
-} */
-
 .close-btn:hover {
  
     
@@ -237,10 +225,8 @@ body {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border: 1px solid limegreen;
-    /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
     border-radius: 10px;
-    /* animation: avatarGlow 5s infinite alternate; */
 }
 .project-cards {
     display: flex;
@@ -335,9 +321,7 @@ body {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border: 1px solid limegreen;
-    /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
-    /* animation: avatarGlow 5s infinite alternate; */
 }
 
 #ComingSoonText {
@@ -359,9 +343,7 @@ body {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border: 1px solid limegreen;
-    /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
-    /* animation: avatarGlow 5s infinite alternate; */
     margin-top: 80px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -443,10 +425,7 @@ body {
     width: 60%;
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    /* border: 1px solid limegreen; */
-    /* box-shadow: 0 0 15px limegreen; */
     margin-top: 50px;
-    /* animation: avatarGlow 5s infinite alternate; */
     margin-top: 80px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -528,10 +507,6 @@ body {
     left: -32px;
 }
 
-/* .timeline-content {
-    padding: 20px;
-} */
-
 .timeline-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -546,4 +521,7 @@ body {
 .icon {
     font-size: 24px;
     margin-right: 10px;
+}
+
+
 }
