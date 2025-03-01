@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 /* ----------------- All styles for the landing page: ----------------*/
 
+/* Media Queries */
+@media (min-width: 768px) {
+    
 body {
     background: black;
     color: limegreen;
@@ -521,46 +524,4 @@ body {
 }
 
 
-/* Media Queries */
-@media (max-width: 768px) {
-    body {
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .container {
-        width: 100%;
-        margin-top: 500px;
-    }
-
-    .title, .intro {
-        font-size: 32px;
-    }
-
-    .btn {
-        font-size: 18px;
-    }
-    /* Menu */
-.menu {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-    
-/* Buttons */
-.btn {
-    font-size: 20px;
-    padding: 8px;
-    width: 90%;
-    max-width: 250px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px #00ff00;
-}
 }
