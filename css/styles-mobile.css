@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 /* ----------------- All styles for the landing page: ----------------*/
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     
     body {
         background: black;
